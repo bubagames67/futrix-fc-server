@@ -1,0 +1,15 @@
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8"
+  });
+
+  res.end("FUTRIX FC Server is running!");
+});
+
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log("FUTRIX FC server started on port " + PORT);
+});
